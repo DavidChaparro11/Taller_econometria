@@ -1,0 +1,12 @@
+
+<table style="text-align:center"><caption><strong>Tabla 1: Estadisticas descriptivas</strong></caption>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Statistic</td><td>N</td><td>Mean</td><td>St. Dev.</td><td>Min</td><td>Max</td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">tingresos</td><td>21,916</td><td>647.338</td><td>5,251.332</td><td>0</td><td>99,999</td></tr>
+<tr><td style="text-align:left">edad</td><td>31,077</td><td>21.997</td><td>17.326</td><td>-1</td><td>99</td></tr>
+<tr><td style="text-align:left">sexo</td><td>31,077</td><td>1.533</td><td>0.499</td><td>1</td><td>2</td></tr>
+<tr><td style="text-align:left">lee_escribe</td><td>31,065</td><td>0.707</td><td>0.455</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">grado_universitario</td><td>31,066</td><td>0.014</td><td>0.116</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">testudio</td><td>31,077</td><td>4.154</td><td>7.488</td><td>-1</td><td>99</td></tr>
+<tr><td style="text-align:left">num_personas</td><td>31,076</td><td>6.492</td><td>2.753</td><td>0</td><td>30</td></tr>
+<tr><td style="text-align:left">ingreso_familiar</td><td>31,075</td><td>3,017.522</td><td>10,314.810</td><td>0</td><td>99,999</td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr></table>
