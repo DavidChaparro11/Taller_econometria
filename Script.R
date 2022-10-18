@@ -24,5 +24,11 @@ gráfica_2 <- ggplot(Encuesta_Empleo_1, aes(x=edad))+
   ggtitle("Histrograma de Edad") 
 gráfica_2
 gráfica_3 <- ggplot(Encuesta_Empleo_1, aes(x=testudio))+
-  geom_histogram(color="blue")
+  geom_histogram(color="blue", fill="blue", alpha=0.75,bins=25, position="identity")+
+  scale_x_continuous(name="años de estudio")+
+  scale_y_continuous(name="Frecuencia")+
+  ggtitle("Histograma de tiempo de estudio")
+gráfica_3
+
+
 
