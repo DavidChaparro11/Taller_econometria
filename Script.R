@@ -11,7 +11,7 @@ tabla1 <- Encuesta_Empleo_1[c("tingresos", "edad", "sexo", "lee_escribe", "grado
 stargazer(tabla1,
           type= "html",
           title="Tabla 1: Estadisticas descriptivas", 
-          out="Descriptivas.doc")
+          out="descriptivas.doc")
 grafica_1 <- ggplot(Encuesta_Empleo_1, aes(x=tingresos))+
   geom_histogram(color="purple4", fill="purple4", alpha=0.75, bins=25, position="identity") +
   scale_x_continuous(name = "Salario") +
@@ -30,5 +30,16 @@ gráfica_3 <- ggplot(Encuesta_Empleo_1, aes(x=testudio))+
   ggtitle("Histograma de tiempo de estudio")
 gráfica_3
 
+##inciso e
 
-
+  sum(is.na(Encuesta_Empleo_1[c("tingresos")]))
+  sum(is.na(Encuesta_Empleo_1[c("edad")]))
+  sum(is.na(Encuesta_Empleo_1[c("sexo")]))
+  sum(is.na(Encuesta_Empleo_1[c("num_personas")]))
+  sum(is.na(Encuesta_Empleo_1[c("lee_escribe")]))
+  sum(is.na(Encuesta_Empleo_1[c("grado_universitario")]))
+  sum(is.na(Encuesta_Empleo_1[c("testudio")]))
+  sum(is.na(Encuesta_Empleo_1[c("ingreso_familiar")]))
+  
+##inciso f
+      
