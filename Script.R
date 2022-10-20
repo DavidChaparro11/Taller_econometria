@@ -6,6 +6,16 @@ p_load(tidyverse, janitor,skimr, stargazer, ggplot2, rio, dplyr)
 ##Como estamos trabajando a partir de un proyecto en R en GitHub, no es necesario estableceer un working directory
 Encuesta_Empleo <- import("ED67-70 (1).dta")
 Encuesta_Empleo_1 <- filter(Encuesta_Empleo, ano %in% c(1967))
+
+##Inciso C
+view(Encuesta_Empleo_1)
+class(Encuesta_Empleo_1$testudio)
+class(Encuesta_Empleo_1$num_personas)
+class(Encuesta_Empleo_1$tingresos)
+class(Encuesta_Empleo_1$sexo)
+class(Encuesta_Empleo_1$ingreso_familiar)
+
+
 ##inciso d
 tabla1 <- Encuesta_Empleo_1[c("tingresos", "sexo", "testudio","num_personas", "ingreso_familiar")]
 stargazer(tabla1,
@@ -39,4 +49,24 @@ gráfica_3
   sum(is.na(Encuesta_Empleo_1[c("ingreso_familiar")]))
   
 ##inciso f
-      
+  ##inciso 
+  ##La distribución de los datos la podemos encontrar en la gráfica 1. Utilizaremos Boxplot para mirar donde se ubican los valores atípicos
+  valores-atípicos <- boxplot(Encuesta_Empleo_1$tingresos)
+  Quantil_99 <- quantile(Encuesta_Empleo_1$tingresos,.99, na.rm = TRUE)
+  Base_encuesta_3<- Encuesta_Empleo_1 %>% filter(tingresos < Quantil_99)
+  hist(Base_encuesta_3$tingresos)
+  ##Distribución final
+  hist(Base_encuesta_3$tingresos)
+  ##inciso G
+  reg_1 <- lm(tingresos ~ sexo, data = Base_encuesta_3)
+  reg_2 <- lm(tingresos ~ testudio, data = Base_encuesta_3)
+  reg_3 <- lm(tingresos ~ grado_universitario, data= Base_encuesta_3)
+  reg_4 <- lm(tingresos ~ edad, data= Base_encuesta_3)
+  stargazer(reg_1, reg_2, reg_3, reg_4,
+            type = "html",
+            covariate.labels = c("sexo", "años de estudio", "Grado universitario", "edad"), 
+            dep.var.labels = c("Salario del individuo"),
+            out = "resultados.doc")
+  
+  
+  
