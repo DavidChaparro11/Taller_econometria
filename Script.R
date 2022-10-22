@@ -115,7 +115,8 @@ Base_final <- Base_arreglada %>% filter (ingreso_familiar < quantil_99_familiar)
   
   ##inciso j
   ##creamos la variable testudio^2
-  reg_10 <- lm(tingresos ~ sexo + testudio + testudio^2 + edad + dias + grado_universitario, data = Base_final)
+ Base_final_1 <- Base_final %>% mutate(testudio_sqr = testudio^2)
+  reg_10 <- lm(tingresos ~ sexo + testudio + testudio_sqr + edad + dias + grado_universitario, data = Base_final_1)
   summary(reg_10)
   stargazer(reg_10, title="Regresión lineal múltiple", type="html",
             covariate.labels = c("sexo", "años de estudio", "años de estudio al cuadrado", "edad", "dias trabajados", "titulo universitario"),
