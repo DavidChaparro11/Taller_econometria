@@ -1,0 +1,25 @@
+
+<table style="text-align:center"><caption><strong>Punto I</strong></caption>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="5"><em>Dependent variable:</em></td></tr>
+<tr><td></td><td colspan="5" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td>tingresos</td><td>testudio</td><td colspan="2">tingresos</td><td>resid2</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">testudio</td><td>46.974<sup>***</sup></td><td></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left"></td><td>(1.045)</td><td></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left">edad</td><td>8.595<sup>***</sup></td><td>0.084<sup>***</sup></td><td></td><td>12.560<sup>***</sup></td><td></td></tr>
+<tr><td style="text-align:left"></td><td>(0.246)</td><td>(0.002)</td><td></td><td>(0.241)</td><td></td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left">resid1</td><td></td><td></td><td>46.974<sup>***</sup></td><td></td><td>46.974<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td>(1.115)</td><td></td><td>(1.045)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td style="text-align:left">Constant</td><td>-84.916<sup>***</sup></td><td>2.234<sup>***</sup></td><td>315.314<sup>***</sup></td><td>20.031<sup>***</sup></td><td>0.000</td></tr>
+<tr><td style="text-align:left"></td><td>(7.071)</td><td>(0.044)</td><td>(4.173)</td><td>(6.983)</td><td>(3.909)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>21,368</td><td>21,368</td><td>21,368</td><td>21,368</td><td>21,368</td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.190</td><td>0.128</td><td>0.077</td><td>0.113</td><td>0.086</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.190</td><td>0.128</td><td>0.077</td><td>0.113</td><td>0.086</td></tr>
+<tr><td style="text-align:left">Residual Std. Error</td><td>571.473 (df = 21365)</td><td>3.742 (df = 21366)</td><td>610.005 (df = 21366)</td><td>597.887 (df = 21366)</td><td>571.460 (df = 21366)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>2,500.575<sup>***</sup> (df = 2; 21365)</td><td>3,137.994<sup>***</sup> (df = 1; 21366)</td><td>1,774.411<sup>***</sup> (df = 1; 21366)</td><td>2,721.951<sup>***</sup> (df = 1; 21366)</td><td>2,021.856<sup>***</sup> (df = 1; 21366)</td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="5" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
