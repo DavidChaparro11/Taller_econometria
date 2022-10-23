@@ -123,9 +123,3 @@ Base_final <- Base_arreglada %>% filter (ingreso_familiar < quantil_99_familiar)
             dep.var.labels = c("ingreso del individuo") 
             , out="Regresión lineal múltiple punto J.doc")
   
-## inciso k
-reg_multiple_propia <- lm(tingresos ~ sexo + testudio + num_personas + ingreso_familiar, data=Base_final)
-stargazer(reg_multiple_propia, title = "regresion lineal multiple propia", type="html",
-          covariate.labels = c("sexo", "años de estudio", "numero de personas en el hogar", "ingreso familiar"),
-          dep.var.labels = c("ingreso del individuo"),
-          out= "regresion múltiple inciso K")
