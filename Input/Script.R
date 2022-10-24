@@ -86,8 +86,31 @@ Base_final <- Base_arreglada %>% filter (ingreso_familiar < quantil_99_familiar)
             covariate.labels = c("sexo", "años de estudio", "Grado universitario", "edad"), 
             dep.var.labels = c("Salario del individuo"),
             out = "resultados.doc")
+  ##inciso h
+  ## Ho: B1 (sexo)=0
+  ## Ha: Hipotesis nula no es verdadera
+  ## Nivel de significancia= 0.05
+  ## Estimador
+  summary(reg_1)
+  -314.271 / 8.416
+  ## t= -37,342
+  ## Valor crítico: 1.96
+  ## Note que el estadístico recae en la región de rechazo porque es mayor en valor absoluto que el valor crítico. 
+  ## Por tanto, se rechaza la hipotesis nula, y se concluye que la relación entre sexo e ingreso es estadísticamente significativa a un nivel de significancia de 0.05
+ 
+  ##Prueba de hipótesis 2 (edad)
+  ## Ho : B1 (edad)= 0
+  ## Ha: Hipotesis nula no es verdadera
+  ## Nivel de significancia= 0.05
+  ## Estimador
+  summary(reg_4)
+  12.56 / 0.2407
+ # t= 52.18 
+  ## Note que el estadístico recae en la región de rechazo porque es mayor en valor absoluto que el valor crítico. 
+  ## Por tanto, se rechaza la hipotesis nula, y se concluye que la relación entre edad e ingreso es estadísticamente significativa a un nivel de significancia de 0.05
   
-  ##incisio i
+  
+   ##incisio i
   
   ##primero corremos la regresión múltiple conjuntamente
   reg_5 <- lm(tingresos ~ testudio + edad, data= Base_final)
