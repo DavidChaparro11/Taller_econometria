@@ -86,8 +86,32 @@ Base_final <- Base_arreglada %>% filter (ingreso_familiar < quantil_99_familiar)
             covariate.labels = c("sexo", "años de estudio", "Grado universitario", "edad"), 
             dep.var.labels = c("Salario del individuo"),
             out = "resultados.doc")
+  ##inciso h
+  ## Ho: B1 (sexo)=0
+  ## Ha: Hipotesis nula no es verdadera
+  ## Nivel de significancia= 0.05
+  ## Estimador
+  tsubs_B1 <- summary(reg_1)$coefficients [,3]
+  summary(reg_1)
+ 
+  -314.271 / 8.416
+  ## t= -37,342
+  ## Valor crítico: 1.96
+ 
   
-  ##incisio i
+ 
+  ##Prueba de hipótesis 2 (edad)
+  ## Ho : B1 (edad)= 0
+  ## Ha: Hipotesis nula no es verdadera
+  ## Nivel de significancia= 0.05
+  ## Estimador
+  tedad_B1 <- summary(reg_4)$coefficients [,3]
+  summary(reg_4)
+  12.56 / 0.2407
+ # t= 52.18 
+ 
+  
+   ##incisio i
   
   ##primero corremos la regresión múltiple conjuntamente
   reg_5 <- lm(tingresos ~ testudio + edad, data= Base_final)
@@ -123,9 +147,3 @@ Base_final <- Base_arreglada %>% filter (ingreso_familiar < quantil_99_familiar)
             dep.var.labels = c("ingreso del individuo") 
             , out="Regresión lineal múltiple punto J.doc")
   
-## inciso k
-reg_multiple_propia <- lm(tingresos ~ sexo + testudio + num_personas + ingreso_familiar, data=Base_final)
-stargazer(reg_multiple_propia, title = "regresion lineal multiple propia", type="html",
-          covariate.labels = c("sexo", "años de estudio", "numero de personas en el hogar", "ingreso familiar"),
-          dep.var.labels = c("ingreso del individuo"),
-          out= "regresion múltiple inciso K")
